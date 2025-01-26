@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pristine clean</title>
+
+    <style>
+        body {
+            background-color: #fcfcfc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="relative px-4 py-5 flex justify-between items-center bg-white shadow-lg">
+        <a class="text-3xl font-bold leading-none" href="index.html">
+          <span class="text-blue-600">Pristine Clean</span>
+        </a>
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center text-blue-600 p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden lg:flex lg:items-center ml-10 lg:w-auto lg:space-x-8">
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="index.html">Home</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="services.html">Services</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="aboutUs.html">About us</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="contactUs.html">Contact us</a></li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="hidden lg:flex lg:items-center lg:ml-10 lg:flex-grow">
+          <input type="text" placeholder="Search..."
+            class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <!-- Sign In / Sign Up Buttons -->
+        <div id="authButtons" class="hidden lg:flex lg:items-center">
+          <a class="py-2 px-4 sm:px-6 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+            href="login.html">Sign In</a>
+          <a class="py-2 px-4 sm:px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200 ml-3"
+            href="signup.html">Sign Up</a>
+        </div>
+        <!-- Profile Icon and Sign Out Button (Hidden by Default) -->
+        <div id="userProfile" class="hidden lg:flex gap-3 lg:items-center">
+          <a href="userProfile.html"><img id="profileIcon" src="../images/user.png" alt="Profile Icon" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full cursor-pointer"></a>
+          <button id="signOutButton" class="py-2 px-3 sm:px-4 bg-red-600 hover:bg-red-700 text-sm text-white rounded-xl transition duration-200 ml-3">
+            Sign Out
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Mobile Menu -->
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-blue-600 text-3xl font-bold leading-none" href="index.html">Pristine Clean</a>
+            <button class="navbar-close">
+              <svg class="h-6 w-6 text-gray-600 cursor-pointer hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <ul>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="index.html">Home</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="services.html">Services</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="aboutUs.html">About us</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="contactUs.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="bg-gray-200">
+        <!-- Hero Section -->
+        <div class="relative bg-cover bg-center h-72" style="background-image: url('../images/booking.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+                <h1 class="text-white text-4xl font-bold">Booking Page</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-3 gap-8">
+        <!-- Form Section -->
+        <div class="col-span-2 bg-white border border-gray-300 p-8 rounded-lg shadow-lg">
+            <h1 class="text-2xl text-center mb-8">Choose Your Service</h1>
+            <p class="text-sm text-gray-500 mb-4">Our flat rate pricing applies to whole home cleanings. For extra large
+                or extra dirty homes the price may be more. For partial home cleans please call us.</p>
+
+            <form class="space-y-8">
+                <!-- Choose Your Service -->
+                <div>
+                    <h2 class="block text-lg mb-2">Choose Your
+                        Service</label>
+                        <select id="service"
+                            class="block w-full h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            <option>Residential Cleaning</option>
+                            <option>Office Cleaning</option>
+                            <option>Move-in/Move-out Cleaning</option>
+                            <option>Deep Cleaning</option>
+                            <option>After Renovtion Cleaning</option>
+                            <option>Car Cleaning</option>
+                        </select>
+                </div>
+
+                <!-- When Would You Like Us To Come -->
+                <div>
+                    <h2 class="block text-lg mb-3">When Would You Like Us To Come?</label>
+                        <p class="text-sm text-gray-500 mb-2">Please choose a date and time that works for you. If your
+                            preferred time isn’t listed, feel free to call us to see if we can make it work.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="date"
+                                class="col-span-1 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            <select
+                                class="col-span-1 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option>--:--</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Evening</option>
+                            </select>
+                        </div>
+                </div>
+
+                <!-- How Often Should We Come -->
+                <div>
+                    <h2 class="block text-lg mb-2">How Often Should We Come?</h2>
+                    <p class="text-sm text-gray-500 mb-4">Book Pristine Clean recurring plan and save 20% annually.</p>
+                    <div class="flex gap-4" id="frequency-container">
+                        <button type="button" onclick="selectFrequency(this)"
+                            class="frequency-button flex-1 py-2 rounded-md bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            Onetime
+                        </button>
+                        <button type="button" onclick="selectFrequency(this)"
+                            class="frequency-button flex-1 py-2 rounded-md bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            Weekly
+                        </button>
+                        <button type="button" onclick="selectFrequency(this)"
+                            class="frequency-button flex-1 py-2 rounded-md bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            Every 2 weeks
+                        </button>
+                        <button type="button" onclick="selectFrequency(this)"
+                            class="frequency-button flex-1 py-2 rounded-md bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            Every 4 weeks
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Select Extras -->
+                <div>
+                    <h2 class="block text-lg mb-2">Select Extras</h2>
+                    <p class="text-sm text-gray-500 mb-10">Select any additional items you need cleaned. Any add-ons
+                        must be selected with all types of cleanings.</p>
+                    <div class="grid grid-cols-4 gap-4" id="extras-container">
+                        <!-- Inside Fridge -->
+                        <button type="button" onclick="toggleExtra(this)"
+                            class="extra-button flex flex-col items-center py-4 border rounded-lg bg-gray-50 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="../images/fridge.png" alt="Inside Oven" class="w-8 h-8 mb-2">
+                            <span class="text-gray-700 font-medium">Inside Fridge</span>
+                            <span class="text-gray-700 font-semibold">$35</span>
+                        </button>
+                        <!-- Inside Oven -->
+                        <button type="button" onclick="toggleExtra(this)"
+                            class="extra-button flex flex-col items-center py-4 border rounded-lg bg-gray-50 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="../images/gas-stove.png" alt="Inside Oven" class="w-8 h-8 mb-2">
+                            <span class="text-gray-700 font-medium">Inside Oven</span>
+                            <span class="text-gray-700 font-semibold">$35</span>
+                        </button>
+
+                        <!-- Inside Cabinets -->
+                        <button type="button" onclick="toggleExtra(this)"
+                            class="extra-button flex flex-col items-center py-4 border rounded-lg bg-gray-50 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="../images/cabinet.png" alt="Inside Oven" class="w-8 h-8 mb-2">
+                            <span class="text-gray-700 font-medium">Inside Cabinets</span>
+                            <span class="text-gray-700 font-semibold">$20</span>
+                        </button>
+
+                        <!-- Clean Windows -->
+                        <button type="button" onclick="toggleExtra(this)"
+                            class="extra-button flex flex-col items-center py-4 border rounded-lg bg-gray-50 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="../images/windows.png" alt="Inside Oven" class="w-8 h-8 mb-2">
+                            <span class="text-gray-700 font-medium">Clean Windows</span>
+                            <span class="text-gray-700 font-semibold">$25</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-lg mb-4">Contact Information</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name*"
+                            class="w-full h-10 border border-gray-500 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <input type="text" placeholder="Last Name*"
+                            class="w-full h-10 border border-gray-500 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <input type="email" placeholder="Email*"
+                            class="w-full h-10 border border-gray-500 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <input type="tel" placeholder="Phone Number*"
+                            class="w-full h-10 border border-gray-500 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <!-- Service Address -->
+                <div>
+                    <h2 class="text-lg mb-4">Service Address</h2>
+                    <div class="grid grid-cols-3 gap-4">
+                        <input type="text" placeholder="Enter A Location*"
+                            class="col-span-2 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <input type="text" placeholder="Apt #"
+                            class="h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div>
+                    <h2 class="text-lg mb-4">Payment Method</h2>
+                    <p class="text-sm text-gray-500 mb-10">Select Your Way of Payment</p>
+                    <div class="flex justify-around gap-4 mb-4">
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="payment" value="cash" onclick="toggleCardInfo(false)">
+                            <span>Cash</span>
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="payment" value="paypal" onclick="toggleCardInfo(false)">
+                            <span>Paypal</span>
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="payment" value="visa" onclick="toggleCardInfo(true)">
+                            <span>Credit/Debit</span>
+                        </label>
+                    </div>
+
+                    <!-- Credit Card Information -->
+                    <div id="card-info" class="hidden space-y-4">
+                        <div class="grid grid-cols-3 gap-4">
+                            <input type="text" placeholder="Card Number"
+                                class="col-span-3 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            <input type="text" placeholder="Exp. Date (mm/yyyy)"
+                                class="col-span-1 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            <input type="text" placeholder="CVV"
+                                class="col-span-1 h-10 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+                        <button type="button"
+                            class="w-full py-2 rounded-md bg-blue-500 text-white font-medium hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none">Save
+                            Card</button>
+                    </div>
+                </div>
+
+                <!-- Anything Else We Should Know? -->
+                <div>
+                    <h2 class="text-lg mb-4">Anything Else We Should Know?</h2>
+                    <textarea placeholder="Please provide any special instructions here."
+                        class="w-full h-20 rounded-md border border-gray-500 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                        class="w-full py-2 rounded-md bg-blue-500 text-white font-medium hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none">Book
+                        Now</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="col-span-1">
+            <div class="sticky top-8 bg-white p-6 rounded-lg shadow-lg border border-gray-300">
+                <h2 class="text-lg font-semibold mb-4">Your Summary</h2>
+                <div class="space-y-2">
+                    <p class="flex items-center text-sm text-gray-700">
+                        <span class="material-icons text-gray-500 mr-2">home</span>
+                        Residential Cleaning
+                    </p>
+                    <p class="flex items-center text-sm text-gray-700">
+                        <span class="material-icons text-gray-500 mr-2">calendar_today</span>
+                        Choose service date...
+                    </p>
+                    <p class="flex items-center text-sm text-gray-700">
+                        <span class="material-icons text-gray-500 mr-2">repeat</span>
+                        One-Time Cleaning
+                    </p>
+                </div>
+                <div class="mt-4">
+                    <label for="discount" class="block text-sm font-medium text-gray-700">Discount</label>
+                    <div class="flex mt-1">
+                        <input id="discount" type="text" placeholder="Discount"
+                            class="w-full h-8 rounded-l-md border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <button
+                            class="rounded-r-md h-8 bg-blue-600 text-white px-4 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Apply</button>
+                    </div>
+                </div>
+                <div class="mt-4 text-right text-blue-600 font-bold text-2xl">$160.00</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-around gap-8">
+                <!-- Company Info -->
+                <div class="sm:w-1/3">
+                    <h3 class="text-xl font-bold text-gray-900">Pristine Clean</h3>
+                    <p class="mt-4 text-gray-600">
+                        At Pristine Clean, we go beyond surface cleaning to deliver an unparalleled experience. Using
+                        eco-friendly products and modern techniques, we provide a cleaner, healthier environment for you
+                        to enjoy. Trust us to bring sparkle and care to every corner of your space, so you can focus on
+                        what truly matters.
+                    </p>
+                    <div class="flex justify-start space-x-4 mt-6">
+                        <!-- Social Media Icons -->
+                        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="text-center sm:w-1/3">
+                    <h3 class="text-xl font-bold text-gray-900">Quick Links</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                        <li><a href="services.html" class="text-gray-600 hover:text-gray-900">Services</a></li>
+                        <li><a href="aboutUs.html" class="text-gray-600 hover:text-gray-900">About Us</a></li>
+                        <li><a href="contactUs.html" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="sm:w-1/3">
+                    <h3 class="text-xl font-bold text-gray-900">Contact Information</h3>
+                    <ul class="mt-4 space-y-6 text-gray-600">
+                        <!-- Address -->
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-900 mr-4"></i>
+                            Zarqa, Jordan
+                        </li>
+                        <!-- Phone -->
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-900 mr-4"></i>
+                            +962-XXX-XXXX
+                        </li>
+                        <!-- Email -->
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-900 mr-4"></i>
+                            info@pristineclean.com
+                        </li>
+                        <!-- Working Hours -->
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-gray-900 mr-4"></i>
+                            <div>
+                                <p>Sun - Thu: 8:00 AM - 5:00 PM</p>
+                                <p>Fri - Sat: 10:00 AM - 3:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between text-sm text-gray-600">
+                <p class="text-center sm:text-left">&copy; Pristine Clean 2025. All Rights Reserved</p>
+                <div class="space-x-4 text-center sm:text-right mt-4 sm:mt-0">
+                    <a href="#" class="hover:underline">Terms of Use</a>
+                    <a href="#" class="hover:underline">Cookie Policy</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const burger = document.querySelector('.navbar-burger');
+        const menu = document.querySelector('.navbar-menu');
+        const backdrop = document.querySelector('.navbar-backdrop');
+        const close = document.querySelector('.navbar-close');
+
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        backdrop?.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+
+        close?.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+
+        // Toggle functionality for highlighting the selected extra
+        function toggleExtra(button) {
+            // Remove blue background if selected, otherwise add it
+            button.classList.toggle("bg-blue-50");
+            button.classList.toggle("text-blue-700");
+            button.classList.toggle("border-blue-500");
+            button.classList.toggle("hover:bg-blue-100");
+            button.classList.toggle("hover:text-blue-600");
+
+            // Change text/icon color to gray when unselected
+            if (!button.classList.contains("bg-blue-50")) {
+                button.classList.add("text-gray-700");
+            }
+        }
+
+        // Radio button logic for "How Often Should We Come"
+        function selectFrequency(button) {
+            // Remove the "selected" styles from all buttons
+            document.querySelectorAll('.frequency-button').forEach(btn => {
+                btn.classList.remove('bg-blue-100', 'text-blue-700');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            // Add the "selected" styles to the clicked button
+            button.classList.remove('bg-gray-100', 'text-gray-700');
+            button.classList.add('bg-blue-100', 'text-blue-700');
+        }
+
+        // Toggle the Card Info Box 
+        function toggleCardInfo(show) {
+            const cardInfo = document.getElementById('card-info');
+            if (show) {
+                cardInfo.classList.remove('hidden');
+            } else {
+                cardInfo.classList.add('hidden');
+            }
+        }
+
+    </script>
+    
+    <script type="module" src="../Js/signedCheck.js"></script>
+
+</body>
+
+</html>

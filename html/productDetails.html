@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/test.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pristine clean</title>
+</head>
+
+<body>
+
+    <nav class="relative px-4 py-5 flex justify-between items-center bg-white shadow-lg">
+        <a class="text-3xl font-bold leading-none" href="index.html">
+          <span class="text-blue-600">Pristine Clean</span>
+        </a>
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center text-blue-600 p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden lg:flex lg:items-center ml-10 lg:w-auto lg:space-x-8">
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="index.html">Home</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="services.html">Services</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="aboutUs.html">About us</a></li>
+          <li><a class="text-md text-gray-500 hover:text-gray-800" href="contactUs.html">Contact us</a></li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="hidden lg:flex lg:items-center lg:ml-10 lg:flex-grow">
+          <input type="text" placeholder="Search..."
+            class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <!-- Sign In / Sign Up Buttons -->
+        <div id="authButtons" class="hidden lg:flex lg:items-center">
+          <a class="py-2 px-4 sm:px-6 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+            href="login.html">Sign In</a>
+          <a class="py-2 px-4 sm:px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200 ml-3"
+            href="signup.html">Sign Up</a>
+        </div>
+        <!-- Profile Icon and Sign Out Button (Hidden by Default) -->
+        <div id="userProfile" class="hidden lg:flex gap-3 lg:items-center">
+          <a href="userProfile.html"><img id="profileIcon" src="../images/user.png" alt="Profile Icon" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full cursor-pointer"></a>
+          <button id="signOutButton" class="py-2 px-3 sm:px-4 bg-red-600 hover:bg-red-700 text-sm text-white rounded-xl transition duration-200 ml-3">
+            Sign Out
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Mobile Menu -->
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-blue-600 text-3xl font-bold leading-none" href="index.html">Pristine Clean</a>
+            <button class="navbar-close">
+              <svg class="h-6 w-6 text-gray-600 cursor-pointer hover:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <ul>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="index.html">Home</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="services.html">Services</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="aboutUs.html">About us</a></li>
+            <li><a class="block p-4 text-md font-semibold text-gray-500 hover:bg-gray-200 hover:text-blue-600 rounded" href="contactUs.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <!-- Service Detail Page -->
+    <div class="bg-gray-50">
+        <!-- Hero Section -->
+        <div class="relative bg-cover bg-center h-96" style="background-image: url('../images/residental.jpeg');">
+            <div class="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center text-white">
+                <h1 class="text-4xl font-bold">Residential Cleaning</h1>
+                <p class="text-lg mt-4">A clean home is a happy home, and our Residential Cleaning service is here to
+                    make yours shine. Whether it’s a routine cleaning or a one-time deep clean, our team ensures every
+                    corner of your home is spotless and refreshed.</p>
+            </div>
+        </div>
+
+        <!-- What's Included -->
+        <section class="max-w-7xl mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-gray-900 text-center">What’s Included</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 4.293a1 1 0 010 1.414l-9 9a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L7 12.586l8.293-8.293a1 1 0 011.414 0z" />
+                    </svg>
+                    <p class="text-gray-700"><strong>Living Areas:</strong> Dusting, vacuuming, and mopping floors;
+                        cleaning furniture and surfaces.</p>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 4.293a1 1 0 010 1.414l-9 9a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L7 12.586l8.293-8.293a1 1 0 011.414 0z" />
+                    </svg>
+                    <p class="text-gray-700"><strong>Kitchen:</strong> Wiping countertops, cleaning sinks, and
+                        sanitizing high-touch areas; exterior cleaning of appliances.</p>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 4.293a1 1 0 010 1.414l-9 9a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L7 12.586l8.293-8.293a1 1 0 011.414 0z" />
+                    </svg>
+                    <p class="text-gray-700"><strong>Bathrooms:</strong> Scrubbing sinks, toilets, showers, and tubs;
+                        cleaning mirrors and wiping surfaces.</p>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 4.293a1 1 0 010 1.414l-9 9a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L7 12.586l8.293-8.293a1 1 0 011.414 0z" />
+                    </svg>
+                    <p class="text-gray-700"><strong>Bedrooms:</strong> Dusting furniture, changing bed linens (if
+                        provided), and tidying spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="bg-gray-100 py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-900 text-center">Why Choose Us?</h2>
+                <div class="mt-8 flex flex-wrap justify-center gap-8">
+                    <div class="max-w-xs text-center">
+                        <img src="../images/icons8-eco-friendly-64.png" alt="Eco-Friendly" class="mx-auto h-16 w-16">
+                        <h3 class="mt-4 text-lg font-semibold">Eco-Friendly</h3>
+                        <p class="mt-2 text-sm text-gray-600">We use eco-friendly products to protect your family and
+                            the environment.</p>
+                    </div>
+                    <div class="max-w-xs text-center">
+                        <img src="../images/icons8-professionals-64.png" alt="Trained Professionals" class="mx-auto h-16 w-16">
+                        <h3 class="mt-4 text-lg font-semibold">Trained Professionals</h3>
+                        <p class="mt-2 text-sm text-gray-600">Our team is highly trained and ensures top-quality service
+                            every time.</p>
+                    </div>
+                    <div class="max-w-xs text-center">
+                        <img src="../images/icons8-affordable-64 (1).png" alt="Affordable Pricing" class="mx-auto h-16 w-16">
+                        <h3 class="mt-4 text-lg font-semibold">Affordable Pricing</h3>
+                        <p class="mt-2 text-sm text-gray-600">We offer competitive pricing without compromising quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900">Ready to Book?</h2>
+                <p class="mt-4 text-lg text-gray-600">Experience the difference with our exceptional cleaning services.
+                </p>
+                <button class="button mt-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+                    <div class="text">
+                        Book Now
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <footer class="bg-gray-100 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-around gap-8">
+                    <!-- Company Info -->
+                    <div class="sm:w-1/3">
+                        <h3 class="text-xl font-bold text-gray-900">Pristine Clean</h3>
+                        <p class="mt-4 text-gray-600">
+                            At Pristine Clean, we go beyond surface cleaning to deliver an unparalleled experience.
+                            Using
+                            eco-friendly products and modern techniques, we provide a cleaner, healthier environment for
+                            you
+                            to enjoy. Trust us to bring sparkle and care to every corner of your space, so you can focus
+                            on
+                            what truly matters.
+                        </p>
+                        <div class="flex justify-start space-x-4 mt-6">
+                            <!-- Social Media Icons -->
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-lg">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="text-center sm:w-1/3">
+                        <h3 class="text-xl font-bold text-gray-900">Quick Links</h3>
+                        <ul class="mt-4 space-y-4">
+                            <li><a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                            <li><a href="services.html" class="text-gray-600 hover:text-gray-900">Services</a></li>
+                            <li><a href="aboutUs.html" class="text-gray-600 hover:text-gray-900">About Us</a></li>
+                            <li><a href="contactUs.html" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="sm:w-1/3">
+                        <h3 class="text-xl font-bold text-gray-900">Contact Information</h3>
+                        <ul class="mt-4 space-y-6 text-gray-600">
+                            <!-- Address -->
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-gray-900 mr-4"></i>
+                                Zarqa, Jordan
+                            </li>
+                            <!-- Phone -->
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt text-gray-900 mr-4"></i>
+                                +962-XXX-XXXX
+                            </li>
+                            <!-- Email -->
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-gray-900 mr-4"></i>
+                                info@pristineclean.com
+                            </li>
+                            <!-- Working Hours -->
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-gray-900 mr-4"></i>
+                                <div>
+                                    <p>Sun - Thu: 8:00 AM - 5:00 PM</p>
+                                    <p>Fri - Sat: 10:00 AM - 3:00 PM</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between text-sm text-gray-600">
+                    <p class="text-center sm:text-left">&copy; Pristine Clean 2025. All Rights Reserved</p>
+                    <div class="space-x-4 text-center sm:text-right mt-4 sm:mt-0">
+                        <a href="#" class="hover:underline">Terms of Use</a>
+                        <a href="#" class="hover:underline">Cookie Policy</a>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            const backdrop = document.querySelector('.navbar-backdrop');
+            const close = document.querySelector('.navbar-close');
+
+            burger.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            backdrop?.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+
+            close?.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        </script>
+
+    <script type="module" src="../Js/signedCheck.js"></script>
+
+</body>
+
+</html>
